@@ -44,10 +44,10 @@ Run
 to set your account's default identity.
 Omit --global to set the identity only in this repository.
 
-fatal: unable to auto-detect email address (got 'CRECI-RS@DESKTOP-7E69UJF.(none)')
+fatal: unable to auto-detect email address (got '-.(none)')
 
  /c/xampp/htdocs/cursophp (master)
-$ git config --global user.email pedro.livi2005@gmail.com
+$ git config --global user.email -----.-----@gmail.com
 
  /c/xampp/htdocs/cursophp (master)
 $ git status
@@ -89,3 +89,5 @@ branch 'main' set up to track 'origin/main'.
 
  /c/xampp/htdocs/cursophp (main)
 $
+
+no trabalho para puxar modificações que foi feita em casa, basta usar git pull na pasta cursophp
