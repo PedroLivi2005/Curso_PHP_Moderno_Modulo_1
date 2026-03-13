@@ -91,3 +91,10 @@ branch 'main' set up to track 'origin/main'.
 $
 
 no trabalho para puxar modificações que foi feita em casa, basta usar git pull na pasta cursophp
+
+modifica
+git status
+git add .
+git commit -m "suas alterações feitas no trabalho"
+git push
+git status
