@@ -13,3 +13,40 @@ e é possível simplificar <?= "CursoemVídeo ?> = short tag PHP.
 
 No PHP 5.6.40 era possível fazer um script PHP usando <script language="php"></script>
 porém isso acabou na versão 7.
+
+-----------------
+
+Funções usadas:
+echo
+phpinfo
+date_default_timezone_set
+date 
+
+-------------
+
+$variavel = Valor pode variar. Sempre com $
+const CONSTANTE = Valor não pode variar. Sempre em maiúscula
+Ambas alocadas na memória do servidor.
+
+
+Regras para nomes identificadores:
+caracter;
+1° variáveis sempre começam com símbolo $
+2° pode ser letra ou símbolo _
+3° Aceita caracteres [a-z], [A-Z], [0-9] e [_]
+4° Aceita caracteres da tabela ASCII a partir de 128
+5° Aceita caracteres acentuados como á, õ, ç
+6° A linguem é case sensitive em relação aos nomes
+7° Nomes especias como $this não podem ser usados
+
+Recomendações para dar nomes
+1° Tente dar nomes claros e de fácil identificação
+2° Evite nomes muito curtos ou muito longos
+3° Defina um padrão e siga em todo o projeto
+4° Para variáveis, dê preferência a letras minúsculas
+5° Para constantes, dê preferência a letras maiúsculas
+6° Use camelCase para métodos e atributos
+7° Use SNAKE_CASE para nomear constantes
+Ex:
+	$nomeCompletoCliente = "Camel Case";
+	$telefone_contato_fornecedor = "Snake Case";
