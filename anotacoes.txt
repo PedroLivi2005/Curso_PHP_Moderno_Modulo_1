@@ -14,7 +14,7 @@ e é possível simplificar <?= "CursoemVídeo ?> = short tag PHP.
 No PHP 5.6.40 era possível fazer um script PHP usando <script language="php"></script>
 porém isso acabou na versão 7.
 
------------------
+------------------
 
 Funções usadas:
 echo
@@ -23,7 +23,7 @@ date_default_timezone_set
 date 
 var_dump
 
-------------------
+-------------------
 
 $variavel = Valor pode variar. Sempre com $
 const CONSTANTE = Valor não pode variar. Sempre em maiúscula
@@ -52,8 +52,10 @@ Ex:
 	$nomeCompletoCliente = "Camel Case";
 	$telefone_contato_fornecedor = "Snake Case";
 
+------------------------
 
-Tipos Primitivos
+Tipos Primitivos PHP / Vídeo 21
+
 Escalares, compostos e especias
 
 Ex. Tipos primitivos escalares
@@ -81,7 +83,9 @@ Tipos Primitivos Especiais
 - callabe
 - mixed (surgiu a partir da v8.0, um tipo primitivo que representa todos os outros)
 
-----------------
+-----------------
+Manipulando Strings com PHP / Vídeo 22
+
 Quatro formatos de Strings
 
 - double quoted = ""
@@ -143,3 +147,34 @@ $snom = "Gafanhoto";
 echo "$nom \"Guanabara\" $snom";
 
 Gustavo "Guanabara" Gafanhoto
+
+-----------------
+Obtendo dados de formulários com PHP (parte 2) / Vídeo 24 
+O operador de coalescência nula em PHP é representado por ??, introduzido no PHP 7 
+para facilitar o tratamento de variáveis nulas ou não definidas.
+
+
+array super global php:
+$_GET, $_POST, $_REQUEST
+
+-----------------
+Operadores Aritméticos do PHP / Vídeo 27 (erro na ordem da playist)
+. -> Operador de concatenação
++ -> Operador aritmético de adição
+/ -> Operador aritmético de divisão real 
+% -> Operador aritmético de módulo/resto da divisão intera
+** -> Operador aritmético de exponenciação 
+
+<?php
+	$r = "2" + "2";
+	var_dump($r);
+?>
+int(4)
+----
+<?php
+	$r = "2" . "2";
+	var_dump($r);
+?>
+string(2) "22"
+
+Parei no vídeo 25
