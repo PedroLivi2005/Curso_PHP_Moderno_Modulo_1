@@ -18,10 +18,23 @@ porém isso acabou na versão 7.
 
 Funções usadas:
 echo
-phpinfo
-date_default_timezone_set
-date 
-var_dump
+phpinfo()
+date_default_timezone_set()
+date()
+var_dump()
+
+Funções ariméticas
+abs()
+base_convert()
+ceil(), floor(), round()
+hypot()
+intdiv()
+min()
+max()
+pi()
+pow()
+sin(), cos(), tan()
+sqrt() 
 
 -------------------
 
