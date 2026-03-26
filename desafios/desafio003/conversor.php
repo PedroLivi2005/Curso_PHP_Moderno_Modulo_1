@@ -15,9 +15,7 @@
             echo "Seus R$ $number equivalem a U$ <strong>" . round($conversor, 2) . "</strong>";
         ?>
         <p><strong>*Cotação fixa de R$5,22</strong> foi informada diretamente no código</p>
-        <button>
-            <a href="javascript:history.go(-1)">Voltar</a>
-        </button>
+        <button onclick="javascript:history.go(-1)">Voltar</button>
     </main>
 </body>
 </html>
