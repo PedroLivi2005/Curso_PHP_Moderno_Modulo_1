@@ -10,11 +10,15 @@
     <main>
         <h1>Conversor de Moedas v1.0</h1>
         <?php
-            $number = $_GET["numero"];
+            $number = (float) ($_GET["numero"] ?? 0);
             $conversor = $number / 5.22;
-            echo "Seus R$ $number equivalem a U$ <strong>" . round($conversor, 2) . "</strong>";
+
+            //Biblioteca intl (Internallization PHP) por padrão vem desativado no XAMPP
+            $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY);
+
+            echo "<p>Seus " . numfmt_format_currency($padrao, $number, "BRL") . " equivalem a<strong> " . numfmt_format_currency($padrao, $conversor, "USD") . "</strong></p>";
         ?>
-        <p><strong>*Cotação fixa de R$5,22</strong> foi informada diretamente no código</p>
+        <p><strong>*Cotação fixa de R$5,22</strong> informada diretamente no código.</p>
         <button onclick="javascript:history.go(-1)">Voltar</button>
     </main>
 </body>

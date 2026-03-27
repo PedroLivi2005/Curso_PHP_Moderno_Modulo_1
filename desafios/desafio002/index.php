@@ -9,12 +9,12 @@
 <body>
     <section>
         <h1>Trabalhando com números aleatórios</h1>
-        <p>Gereando um número aleatórios entre 0 e 100...</p>
+        <p>Gerando um número aleatório entre 0 e 100...</p>
         <?php
             $num = mt_rand(1, 100);
             echo "O valor gerado foi <strong>$num</strong>";        
         ?>
-        <button onclick="window.location.reload()">🔄 Gerar outro</button>
+        <button onclick="window.location.reload()">🔄 Gerar outro </button> <!--&#x1F504;  símbolo de reload-->
     </section>
 </body>
 </html>

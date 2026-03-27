@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio PHP 003 Resposta</title>
+    <title>Desafio PHP 004 Resposta</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,10 +23,9 @@
 
             $conversor = $number / $cotacao;
 
-            echo "Seus R$ $number equivalem a <strong>US$". round($conversor, 2) ."</strong>";
-
-
+            echo "Seus R$ $number equivalem a <strong>US$ ". round($conversor, 2) ."*</strong>";
         ?>
+        <p>*Cotação obtida diretamente do site do <a href="https://www.bcb.gov.br" target="_blank">Banco Central do Brasil</a></p>
         <button onclick="javascript:history.go(-1)">Voltar</button>
     </main>
 </body>

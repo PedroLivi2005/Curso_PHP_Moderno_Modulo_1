@@ -20,9 +20,7 @@
                     <li>A parte fracionária do número é <b>" . round($fracionaria, 4) . "</b></li>
                 </ul>";
         ?>
-        <button>
-            <a href="javascript:history.go(-1)">Voltar</a>
-        </button>
+        <button class="javascript:history.go(-1)">Voltar</button>
     </main>
 </body>
 </html>
