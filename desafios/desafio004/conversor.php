@@ -10,8 +10,6 @@
     <main>
         <h1>Conversor de Moedas v2.0</h1>
         <?php
-            $number = $_GET["numero"];
-
             $inicio = date("m-d-Y", strtotime("-7 days"));
             $fim = date("m-d-Y");
 
@@ -21,9 +19,14 @@
 
             $cotacao = $dados["value"][0]["cotacaoCompra"];
 
-            $conversor = $number / $cotacao;
+            $number = (float) ($_GET["numero"] ?? 0);
 
-            echo "Seus R$ $number equivalem a <strong>US$ ". round($conversor, 2) ."*</strong>";
+            $conversor = $number / $cotacao;
+            //Formatação de moedas com internacionalização
+            //Biblioteca intl (Internallization PHP) por padrão vem desativado no XAMPP
+            $padrao = numfmt_create("pt-br", NumberFormatter::CURRENCY);
+
+            echo "<p>Seus " . numfmt_format_currency($padrao, $number, "BRL") . " equivalem a <strong>". numfmt_format_currency($padrao, $conversor, "USD") . "*</strong></p>";
         ?>
         <p>*Cotação obtida diretamente do site do <a href="https://www.bcb.gov.br" target="_blank">Banco Central do Brasil</a></p>
         <button onclick="javascript:history.go(-1)">Voltar</button>

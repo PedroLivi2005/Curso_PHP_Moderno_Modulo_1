@@ -12,7 +12,7 @@
         <?php
             $number = (float) ($_GET["numero"] ?? 0);
             $conversor = $number / 5.22;
-
+            //Formatação de moedas com internacionalização
             //Biblioteca intl (Internallization PHP) por padrão vem desativado no XAMPP
             $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY);
 

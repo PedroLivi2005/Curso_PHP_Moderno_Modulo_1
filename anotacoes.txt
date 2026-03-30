@@ -201,4 +201,17 @@ int(4)
 ?>
 string(2) "22"
 
-Parei no vídeo 25
+------------------
+Superglobais no PHP / Vídeo 34
+
+QUERY STRING: É a parte da URL que segue um ponto de interrogação, usada para enviar dados do cliente (navegador) para o servidor.
+
+$_GET
+$_POST
+$_REQUEST
+$_COOKIE
+$_FILES
+$_SESSION
+$_ENV
+$_SERVER
+$GLOBALS
