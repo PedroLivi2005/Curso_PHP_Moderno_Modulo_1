@@ -33,6 +33,7 @@ rand()
 mt_rand()
 random_int()
 numfmt_create()
+strstr()
 
 Funções ariméticas
 abs()
