@@ -203,6 +203,14 @@ int(4)
 string(2) "22"
 
 ------------------
+Desafio 003: Conversor de Moedas básico - Vídeo 31
+
+//Formatação de moedas com internacionalização
+//Biblioteca intl (Internallization PHP) por padrão vem desativado no XAMPP
+https://www.youtube.com/watch?v=483Koc7TLu8&list=PLHz_AreHm4dlFPrCXCmd5g92860x_Pbr_&index=31&t=971s
+
+------------------
+
 Superglobais no PHP / Vídeo 34
 
 QUERY STRING: É a parte da URL que segue um ponto de interrogação, usada para enviar dados do cliente (navegador) para o servidor.
@@ -216,3 +224,4 @@ $_SESSION
 $_ENV
 $_SERVER
 $GLOBALS
+

@@ -24,6 +24,7 @@
             $conversor = $number / $cotacao;
             //Formatação de moedas com internacionalização
             //Biblioteca intl (Internallization PHP) por padrão vem desativado no XAMPP
+            //https://www.youtube.com/watch?v=483Koc7TLu8&list=PLHz_AreHm4dlFPrCXCmd5g92860x_Pbr_&index=31&t=971s
             $padrao = numfmt_create("pt-br", NumberFormatter::CURRENCY);
 
             echo "<p>Seus " . numfmt_format_currency($padrao, $number, "BRL") . " equivalem a <strong>". numfmt_format_currency($padrao, $conversor, "USD") . "*</strong></p>";
