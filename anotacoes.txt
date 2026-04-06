@@ -190,6 +190,11 @@ Operadores Aritméticos do PHP / Vídeo 27 (erro na ordem da playist)
 % -> Operador aritmético de módulo/resto da divisão intera
 ** -> Operador aritmético de exponenciação 
 
+Ordem de Precedência php
+**	Exponenciação
+*, /, %	
++, -
+
 <?php
 	$r = "2" + "2";
 	var_dump($r);
