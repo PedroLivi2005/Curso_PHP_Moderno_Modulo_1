@@ -9,7 +9,7 @@
 <body>
     <?php
         $valor1 = (int) ($_GET['v1'] ?? 0);
-        $valor2 = (int) ($_GET['v2'] ?? 0);
+        $valor2 = (int) ($_GET['v2'] ?? 1);
 
         //$email = $_GET['email'] ?? "";
         //$senha = $_GET['senha'] ?? "";
@@ -18,21 +18,21 @@
         <h1>Anatomia de uma Divisão</h1>
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get">
             <label for="v1">Valor 1</label>
-            <input type="number" name="v1" id="v1" value="<?=$valor1?>">
+            <input type="number" name="v1" id="v1" min="0" value="<?=$valor1?>">
             <label for="v2">Valor 2</label>
-            <input type="number" name="v2" id="v2" value="<?=$valor2?>">
+            <input type="number" name="v2" id="v2" min="1" value="<?=$valor2?>">
            
             <!--<label for="email">Digitar email</label>
             <input type="email" name="email" id="email">
             <label for="senha">Digitar senha</label>
             <input type="password" name="senha" id="senha">-->
-            <input type="submit" value="Analizar">
+            <input type="submit" value="Analisar">
         </form>
     </main>
     <section id="resultado">
         <h2>Estrutura da divisão</h2>
         <?php
-            $divisao = $valor1 / $valor2;
+            $divisao = intdiv($valor1, $valor2);
             $resto = $valor1 % $valor2;
             //echo "Dividendo: $valor1<br>";
             //echo "Divisor: $valor2<br>";
@@ -71,9 +71,13 @@
                 <div class='dividendo'>$valor1</div>
                 <div class='divisor'>$valor2</div>
                 <div class='resto'>$resto</div>
-                <div class='resultado'>$divisao</div>
+                <div class='resultado'>".$divisao."</div>
             </div>
             ";
+
+            //$divisao = $valor1 / $valor2;
+            //$resto = $valor1 % $valor2;
+
             //echo strstr($email, '@') . "<br>";
             //echo $senha;
         ?>

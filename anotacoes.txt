@@ -46,7 +46,8 @@ max()
 pi()
 pow()
 sin(), cos(), tan()
-sqrt() 
+sqrt()
+intdiv() 
 
 -------------------
 
