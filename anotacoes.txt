@@ -34,6 +34,7 @@ mt_rand()
 random_int()
 numfmt_create()
 strstr()
+htmlspecialchars()
 
 Funções ariméticas
 abs()

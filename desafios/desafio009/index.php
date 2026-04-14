@@ -16,18 +16,18 @@
     ?>
     <main>
         <h1>Médias Aritimédicas</h1>
-        <form method="$_GET">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="$_GET">
             <label for="v1">1° Valor</label>
-            <input type="number" name="v1" id="v1" value="<?=$primeiro_valor?>">
+            <input type="number" name="v1" id="v1" required value="<?=$primeiro_valor?>">
 
             <label for="p1">1° Peso</label>
-            <input type="number" name="p1" id="p1" value="<?=$primeiro_peso?>">
+            <input type="number" name="p1" id="p1" min="1" required value="<?=$primeiro_peso?>">
 
             <label for="v2">2° Valor</label>
-            <input type="number" name="v2" id="v2" value="<?=$segundo_valor?>">
+            <input type="number" name="v2" id="v2" required value="<?=$segundo_valor?>">
 
             <label for="p2">2° Peso</label>
-            <input type="number" name="p2" id="p2" value="<?=$segundo_peso?>">
+            <input type="number" name="p2" id="p2" min="1" required value="<?=$segundo_peso?>">
 
             <input type="submit" value="Calcular Médias">
         </form>
@@ -40,7 +40,7 @@
         $media_simples = ($primeiro_valor + $segundo_valor) / 2;
 
         $media_ponderada = ($primeiro_valor * $primeiro_peso + $segundo_valor * $segundo_peso) / ($primeiro_peso + $segundo_peso);
-
+        
         echo "
             <ul>
                 <li>A <strong>Média Aritimédica Simples</strong> entre os valores é igual a " . number_format($media_simples, 2, ",") . ".</li>

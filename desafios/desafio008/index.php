@@ -12,7 +12,7 @@
     ?>
     <main>
         <h1>Informe o número</h1>
-        <form action="" method="get">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="get">
             <label for="numero">Número:</label>
             <input type="number" name="numero" id="numero" value="<?=$numero?>">
             <input type="submit" value="Calcular Raízes">
@@ -23,14 +23,13 @@
         <?php 
         echo "Analisando o <strong>número " . $numero . "</strong>, temos:";
 
-        $raiz_qudra = sqrt($numero); // ou $numero ** (1/2)
+        $raiz_qudra = sqrt($numero); // ou $numero ** (1/2);
         $raiz_cubica = $numero ** (1/3);
 
         echo "  <ul>
-                    <li>A sua raiz quadrada é <strong>" . number_format($raiz_qudra, 3, ",") . "</strong></li>
-                    <li>A sua raiz cúbica é <strong>" . number_format($raiz_cubica, 3, ",") . "</strong></li>
+                    <li>A sua raiz quadrada é <strong>" . number_format($raiz_qudra, 3, ",", ".") . "</strong></li>
+                    <li>A sua raiz cúbica é <strong>" . number_format($raiz_cubica, 3, ",", ".") . "</strong></li>
                 </ul>";
-
         ?>
     </section>
 </body>
