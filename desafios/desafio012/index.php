@@ -8,11 +8,11 @@
 </head>
 <body>
     <?php 
-    $segundo = (int) ($_GET["segundo"] ?? 0);
+        $segundo = (int) ($_GET["segundo"] ?? 0);
     ?>
     <main>
         <h1>Calculadora de Tempo</h1>
-            <form action="" method="get">
+        <form action="" method="get">
             <label for="segundo">Qual o total de segundos</label>
             <input type="number" name="segundo" id="segundo">
 
@@ -22,28 +22,28 @@
     <section>
         <h2>Totalizando Tudo</h2>
         <?php
-        $semana = floor($segundo / 604800);
-        $resto = $segundo % 604800;
+            $semana = floor($segundo / 604800);
+            $resto = $segundo % 604800;
 
-        $dia = floor($resto / 86400) ; // 86.400;
-        $resto = $resto % 86400;
-        
-        $hora = floor($resto / 3600);
-        $resto = $resto % 3600;
-        
-        $minuto = floor($resto / 60);
-        
-        $segundo_saida = $resto % 60;
+            $dia = floor($resto / 86400) ; // 86.400;
+            $resto = $resto % 86400;
+            
+            $hora = floor($resto / 3600);
+            $resto = $resto % 3600;
+            
+            $minuto = floor($resto / 60);
+            
+            $segundo_saida = $resto % 60;
 
-        echo "<p>Analizando o valor que você digitou, <strong>" . number_format($segundo, 0, ".", ".") . "</strong> segundos equivalem a um total de:</p>";
+            echo "<p>Analisando o valor que você digitou, <strong>" . number_format($segundo, 0, ".", ".") . "</strong> segundos equivalem a um total de:</p>";
 
-        echo "<ul>
-                <li>" . number_format($semana, 0, ".", ".") . " semanas</li>
-                <li>" . number_format($dia, 0, ".", ".") . " dias</li>
-                <li>" . number_format($hora, 0, ".", ".") . " horas</li>
-                <li>" . number_format($minuto, 0, ".", ".") . " minutos</li>
-                <li>" . number_format($segundo_saida, 0, ".", ".") . " segundos</li>
-            </ul>";
+            echo "<ul>
+                    <li>" . number_format($semana, 0, ".", ".") . " semanas</li>
+                    <li>" . number_format($dia, 0, ".", ".") . " dias</li>
+                    <li>" . number_format($hora, 0, ".", ".") . " horas</li>
+                    <li>" . number_format($minuto, 0, ".", ".") . " minutos</li>
+                    <li>" . number_format($segundo_saida, 0, ".", ".") . " segundos</li>
+                </ul>";
         ?>
     </section>
 </body>

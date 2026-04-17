@@ -8,9 +8,8 @@
 </head>
 <body>
     <?php 
-    $preco = (float) ($_GET["preco"] ?? 0);
-
-    $reajuste = $_GET["reajuste"] ?? 0;
+        $preco = (float) ($_GET["preco"] ?? 0);
+        $reajuste = $_GET["reajuste"] ?? 0;
     ?>
     <main>
         <h1>Reajustador de Preços</h1>
@@ -36,9 +35,7 @@
             $novo_preco = $preco + $porcentagem;
 
             echo "O produto que custava " . number_format($preco, 2, ",", ".") . ", com <strong>" . $reajuste . "% de aumento</strong> vai passar a custar <strong>R$" . number_format($novo_preco, 2, ",", ".") . "</strong> a partir de agora.";
-
         ?>
-        
     </section>
 </body>
 </html>

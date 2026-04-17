@@ -8,15 +8,15 @@
 </head>
 <body>
     <?php
-    $valor = (int) ($_GET["valor"] ?? 0);
+        $valor = (int) ($_GET["valor"] ?? 0);
     ?>
     <main>
         <h1>Caixa Eletrônico</h1>
             <form action="" method="get">
-                <label for="">Qual o valor que você deseja sacar? (R$)*</label>
+                <label for="">Qual o valor que você deseja sacar? (R$)<sup>*</sup></label>
                 <input type="number" name="valor" id="valor" min="0" step="5">
 
-                <p>*Notas disponíveis: R$100, R$50, R$10 e R$5</p>
+                <p style="font-size: 0.7em;"><sup>*</sup>Notas disponíveis: R$100, R$50, R$10 e R$5</p>
                 <input type="submit" value="Sacar">
             </form>
     </main>
@@ -25,7 +25,7 @@
             $cem = floor($valor / 100);
             $resto = $valor % 100;
 
-            $cinquenta = floor($resto / 50) ;
+            $cinquenta = floor($resto / 50);
             $resto = $resto % 50;
             
             $dez = floor($resto / 10);
