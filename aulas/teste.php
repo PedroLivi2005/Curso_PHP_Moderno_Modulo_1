@@ -37,6 +37,5 @@
             echo $senha;
         ?>
     </section>
-    
 </body>
 </html>
